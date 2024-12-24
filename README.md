@@ -37,8 +37,8 @@ Welcome to my online portfolio! Whether you're a fellow developer, recruiter, or
 
 ## 📸 **Screenshots / Demo**
 
-Here's a quick preview of my portfolio:
 
+Here's a quick preview of my portfolio:
 **Portfolio Screenshot in light mode**![image](https://github.com/user-attachments/assets/a2adda79-cfc0-4661-a2fe-30573e5dc083)
 **Portfolio Screenshot in dark mode**![image](https://github.com/user-attachments/assets/cf23b62a-2c1f-444d-88f5-4d191d6ab0b4)
 
