@@ -44,11 +44,8 @@ Here's a quick preview of my portfolio:
 **Portfolio Screenshot in dark mode**![image](https://github.com/user-attachments/assets/8fc674f4-719c-4529-a249-04c966558c57)
 
 
+🚀 **[Explore My Live Portfolio Here!](https://jawadabbasi14.github.io/My_portfolio/)** ✨
 
-
-Check out the **[live demo] (https://jawadabbasi14.github.io/My_portfolio/)** of my portfolio to experience it in action!
-
----
 
 ## 🌐 **Live Demo**
 
