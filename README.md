@@ -30,10 +30,28 @@ Welcome to my online portfolio! Whether you're a fellow developer, recruiter, or
 
 ## 💻 **Technologies Used**
 
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+), [React, Vue, or any other frontend frameworks]
-- **Backend (if applicable):** [List any backend technologies, e.g., Node.js, Express]
-- **Databases:** [List any databases like MongoDB, MySQL, etc.]
-- **Other Tools:** [Any tools or libraries you used, like Git, Webpack, etc.]
+---
+
+**Frontend:**
+- HTML5 🏗️
+- CSS3 🎨
+- JavaScript (ES6+) 💻
+- React / Vue / [Other frameworks] ⚛️ / 🌐
+
+**Backend (if applicable):**
+- Node.js 🟩
+- Express ⚙️
+
+**Databases:**
+- MongoDB 🗄️
+- MySQL 🧮
+
+**Other Tools:**
+- Git 🧑‍💻
+- Webpack ⚡
+
+---
+
 
 ## 📸 **Screenshots / Demo**
 
