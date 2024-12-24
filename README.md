@@ -39,8 +39,10 @@ Welcome to my online portfolio! Whether you're a fellow developer, recruiter, or
 
 
 Here's a quick preview of my portfolio:
-**Portfolio Screenshot in light mode**![image](https://github.com/user-attachments/assets/a2adda79-cfc0-4661-a2fe-30573e5dc083)
-**Portfolio Screenshot in dark mode**![image](https://github.com/user-attachments/assets/cf23b62a-2c1f-444d-88f5-4d191d6ab0b4)
+**Portfolio Screenshot in light mode**![image]](https://github.com/user-attachments/assets/555dd626-c709-42e0-83d5-f12df9e62edd)
+
+**Portfolio Screenshot in dark mode**![image](https://github.com/user-attachments/assets/8fc674f4-719c-4529-a249-04c966558c57)
+
 
 
 
@@ -50,7 +52,8 @@ Check out the **[live demo] (https://jawadabbasi14.github.io/My_portfolio/)** of
 
 ## 🌐 **Live Demo**
 
-- **[View My Portfolio Website]( https://jawadabbasi14.github.io/My_portfolio/)**
+**[View My Portfolio Website](https://jawadabbasi14.github.io/My_portfolio/)**
+
 
 ---
 
