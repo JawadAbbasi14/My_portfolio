@@ -44,13 +44,13 @@ Here's a quick preview of my portfolio:
 
 
 
-Check out the **[live demo]( https://jawadabbasi14.github.io/My_portfolio/)** of my portfolio to experience it in action!
+Check out the **[live demo] (https://jawadabbasi14.github.io/My_portfolio/)** of my portfolio to experience it in action!
 
 ---
 
 ## 🌐 **Live Demo**
 
-- **[View My Portfolio Website](https://jawadabbasi14.github.io/My_portfolio/)**
+- **[View My Portfolio Website]( https://jawadabbasi14.github.io/My_portfolio/)**
 
 ---
 
