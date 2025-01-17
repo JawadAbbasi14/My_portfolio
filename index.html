@@ -194,14 +194,22 @@
         <button><a href="index.html"><b>Refresh</b></a></button>
         <button><a href="contactme.html"><b>Contact</b></a></button>
     </div>
-<script>
-    function toggleMode() {
-        document.body.classList.toggle('dark');
-        document.body.classList.toggle('light');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+</head>
+<body>
+  <script>
+    const imgElements = document.querySelectorAll('img');
+    for (const img of imgElements) {
+      const imagePath = img.getAttribute('src');
+      console.log(`Image path: ${imagePath}`);
+      // You can use this path to check if the file exists using libraries like fs
     }
+  </script>
 
-    // Default mode
-    document.body.classList.add('light');
-</script>
-</body>
+  </body>
 </html>
