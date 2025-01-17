@@ -53,49 +53,6 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Heading Animation */
-        @keyframes typingEffect {
-      0% { color: green; content: "Hello, I am Jawad!"; }
-      33% { color: red; content: "Hello, I am a Developer!"; }
-      66% { color: yellow; content: "Hello, I am a Programmer!"; }
-      100% { color: green; content: "Hello, I am Jawad!"; }
-    }
-  
-    .animated-heading {
-      animation: typingEffect 6s infinite;
-    }
-
-        @keyframes fadeInScale {
-            0% {
-                opacity: 0;
-                transform: scale(0.5);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        /* Highlighted Paragraph */
-        .highlighted-para {
-            text-align: center;
-            font-size: 20px;
-            margin: 20px 0;
-            color: #34eb5e; /* Green */
-            animation: textSlideIn 2s ease;
-        }
-
-        @keyframes textSlideIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         /* Portfolio Grid */
         .portfolio {
             display: flex;
@@ -195,10 +152,6 @@
                 width: 150px;
                 height: 150px;
             }
-
-            .animated-heading {
-                font-size: 32px;
-            }
         }
     </style>
 </head>
@@ -206,19 +159,11 @@
     <button class="switch-mode" onclick="toggleMode()">Switch</button>
     <h1 align="center">
         <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=35&duration=4000&pause=500&center=true&vCenter=true&width=800&lines=Hello%2C+I+am+Jawad!;Welcome+to+my+portfolio!;I+am+Python+Developer+%26+Programmer+%F0%9F%92%BB!" style="color:green; font-weight:bolder;" />
-      </h1>
+    </h1>
 
-
-      </h1>
-      
-      
-      
- 
-      
     <p class="highlighted-para">Explore my creative work and skills below!</p>
 
     <section class="portfolio">
-        
         <div class="portfolio-item">
             <img src="myintro.jpg" alt="About Me">
             <span><a href="myintro.html">ABOUT ME</a></span>
@@ -228,10 +173,9 @@
             <span><a href="services.html">MY SKILLS</a></span>
         </div>
         <div class="portfolio-item">
-         <img src="cv.jpg" alt="My Cv">
-         <span><a href="services.html">MY SKILLS</a></span>
-     </div>
-     
+            <img src="cv.jpg" alt="My CV">
+            <span><a href="cv.html">MY CV</a></span>
+        </div>
         <div class="portfolio-item">
             <img src="project.png" alt="Projects">
             <span><a href="myProject..html">PROJECTS</a></span>
