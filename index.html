@@ -5,170 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jawad's Portfolio</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: url('background.jpg') no-repeat center center/cover;
-            font-family: 'Arial', sans-serif;
-            color: #fff;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Arial', sans-serif; 
             transition: 0.5s ease;
         }
-
-        .dark { background-color: #020000; color: white; }
-        .light { background-color: whitesmoke; color: #020000; }
-
+        
+        /* Theme colors */
+        .light { background: #f5f5f5; color: #333; }
+        .dark { background: #020000; color: white; }
+        
         .switch-mode {
-            width: 100px;
-            height: 40px;
-            border-radius: 20px;
-            background-color: #333;
             position: fixed;
             top: 20px;
-            left: 20px;
-            border: none;
+            right: 20px;
+            padding: 10px 20px;
+            border-radius: 20px;
             cursor: pointer;
+            background: #333;
             color: white;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
-
-        .switch-mode:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: none;
         }
 
         .portfolio {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .portfolio-item {
-            width: 200px;
-            height: 200px;
-            background: #fff;
+            background: white;
             border-radius: 10px;
             overflow: hidden;
-            position: relative;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
 
         .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transform: translateY(-5px);
         }
 
         .portfolio-item img {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
-            transition: 0.5s ease;
-        }
-
-        .portfolio-item:hover img {
-            transform: scale(1.2);
-            filter: brightness(80%);
+            border-bottom: 3px solid lightgreen;
         }
 
         .portfolio-item span {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
-            opacity: 0;
-            transition: 0.3s;
-            font-size: 14px;
-        }
-
-        .portfolio-item:hover span {
-            opacity: 1;
+            display: block;
+            padding: 15px;
+            text-align: center;
+            background: white;
+            color: #333;
+            font-weight: bold;
         }
 
         .nav-buttons {
-            display: flex;
-            justify-content: center;
+            text-align: center;
             padding: 20px;
-            gap: 20px;
         }
 
         .nav-buttons button {
-            font-size: 18px;
+            padding: 12px 25px;
+            margin: 0 10px;
             background: lightgreen;
-            color: black;
-            border: 3px solid black;
-            padding: 15px 30px;
-            border-radius: 8px;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            transition: 0.3s;
-            width: 150px;
-        }
-
-        .nav-buttons button:hover {
-            background: green;
-            color: whitesmoke;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            font-size: 16px;
         }
 
         @media (max-width: 600px) {
-            .portfolio-item {
-                width: 150px;
-                height: 150px;
-            }
+            .portfolio { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body class="light">
-    <button class="switch-mode" onclick="toggleMode()">Switch</button>
-    
-    <h1 align="center">
-        <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=35&duration=4000&pause=500&center=true&vCenter=true&width=800&lines=Hello%2C+I+am+Jawad!;Welcome+to+my+portfolio!;I+am+Python+Developer+%26+Programmer+%F0%9F%92%BB!" 
-             alt="Animated Header" 
-             style="color:green; font-weight:bolder;">
+    <button class="switch-mode" onclick="toggleMode()">🌓 Toggle Theme</button>
+
+    <h1 style="text-align: center; padding: 40px 20px; color: green;">
+        Hello, I'm Jawad!<br>
+        <span style="font-size: 0.8em;">Python Developer & Programmer</span>
     </h1>
 
-    <section class="portfolio">
-        <!-- Replace image filenames with your actual files -->
-        <div class="portfolio-item">
-            <img src="about-me.jpg" alt="About Me">
-            <span><a href="myintro.html">ABOUT ME</a></span>
-        </div>
-        <div class="portfolio-item">
-            <img src="skills.jpg" alt="My Skills">
-            <span><a href="services.html">MY SKILLS</a></span>
-        </div>
-        <div class="portfolio-item">
-            <img src="cv.jpg" alt="My CV">
-            <span><a href="cv.html">MY CV</a></span>
-        </div>
-        <div class="portfolio-item">
-            <img src="projects.jpg" alt="Projects">
-            <span><a href="projects.html">PROJECTS</a></span>
-        </div>
-        <div class="portfolio-item">
-            <img src="contact.jpg" alt="Contact">
-            <span><a href="contact.html">CONTACT</a></span>
-        </div>
-        <div class="portfolio-item">
-            <img src="blog.jpg" alt="Blog">
-            <span><a href="blog.html">BLOG</a></span>
-        </div>
-    </section>
+    <div class="portfolio">
+        <!-- Update image paths to your actual images -->
+        <a href="myintro.html" class="portfolio-item">
+            <img src="https://via.placeholder.com/300x200/7CFC00/000000?text=About+Me" alt="About Me">
+            <span>ABOUT ME</span>
+        </a>
+        <a href="services.html" class="portfolio-item">
+            <img src="https://via.placeholder.com/300x200/7CFC00/000000?text=Skills" alt="My Skills">
+            <span>MY SKILLS</span>
+        </a>
+        <a href="cv.html" class="portfolio-item">
+            <img src="https://via.placeholder.com/300x200/7CFC00/000000?text=CV" alt="My CV">
+            <span>MY CV</span>
+        </a>
+        <a href="projects.html" class="portfolio-item">
+            <img src="https://via.placeholder.com/300x200/7CFC00/000000?text=Projects" alt="Projects">
+            <span>PROJECTS</span>
+        </a>
+        <a href="contact.html" class="portfolio-item">
+            <img src="https://via.placeholder.com/300x200/7CFC00/000000?text=Contact" alt="Contact">
+            <span>CONTACT</span>
+        </a>
+        <a href="blog.html" class="portfolio-item">
+            <img src="https://via.placeholder.com/300x200/7CFC00/000000?text=Blog" alt="Blog">
+            <span>BLOG</span>
+        </a>
+    </div>
 
     <div class="nav-buttons">
-        <button><a href="index.html">Refresh</a></button>
-        <button><a href="contact.html">Contact</a></button>
+        <button onclick="location.reload()">Refresh</button>
+        <button onclick="window.location.href='contact.html'">Contact</button>
     </div>
 
     <script>
