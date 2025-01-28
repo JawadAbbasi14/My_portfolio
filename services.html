@@ -6,237 +6,138 @@
     <title>Services | Jawad</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Custom Styles for Services Page */
-        :root {
-            --primary-color: #2ecc71;
-            --secondary-color: #27ae60;
-            --dark-color: #2c3e50;
-            --light-color: #ecf0f1;
-        }
-
-        .container {
-            display: flex;
-            min-height: 100vh;
-            background: var(--light-color);
-        }
-
-        /* Enhanced Sidebar */
-        .sidebar {
-            background: linear-gradient(145deg, var(--dark-color), #34495e);
-            width: 250px;
-            padding: 2rem;
-            position: fixed;
-            height: 100%;
-            box-shadow: 5px 0 15px rgba(0,0,0,0.1);
-        }
-
-        .sidebar-header {
-            color: white;
-            padding-bottom: 2rem;
-            border-bottom: 2px solid var(--primary-color);
-        }
-
-        .sidebar-header h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .sidebar-header h2 {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-        }
-
-        .nav-item {
-            color: var(--light-color);
-            padding: 1rem;
-            margin: 0.5rem 0;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-
-        .nav-item:hover {
-            background: var(--primary-color);
-            transform: translateX(10px);
-        }
-
-        .icon {
-            font-size: 1.2rem;
-            margin-right: 1rem;
-        }
-
-        /* Services Section */
-        #services {
-            margin-left: 250px;
+        /* Services Page Specific Styles */
+        .services-hero {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
             padding: 4rem 2rem;
-            width: calc(100% - 250px);
+            text-align: center;
+            color: white;
         }
 
-        #services h1 {
-            font-size: 2.5rem;
-            color: var(--dark-color);
+        .services-hero h1 {
+            font-size: 3rem;
             margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        #services h1::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: var(--primary-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         .services-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .service {
+        .service-card {
             background: white;
+            border-radius: 15px;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .service:hover {
+        .service-card:hover {
             transform: translateY(-10px);
         }
 
-        .service::before {
+        .service-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 5px;
-            height: 100%;
-            background: var(--primary-color);
-            transition: width 0.3s ease;
+            width: 100%;
+            height: 4px;
+            background: #2ecc71;
+            transition: height 0.3s ease;
         }
 
-        .service:hover::before {
-            width: 100%;
+        .service-card:hover::before {
+            height: 100%;
             opacity: 0.1;
         }
 
-        .service h2 {
-            color: var(--dark-color);
+        .service-card h2 {
+            color: #2c3e50;
             margin-bottom: 1rem;
             position: relative;
-            z-index: 1;
         }
 
-        .service p {
+        .service-card p {
             color: #666;
-            line-height: 1.6;
+            line-height: 1.7;
             position: relative;
-            z-index: 1;
         }
 
-        /* CTA Button */
-        .cta-button {
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
             display: inline-block;
-            padding: 1rem 2rem;
-            background: var(--primary-color);
-            color: white !important;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            margin-top: 2rem;
+            background: #2ecc71;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
         }
 
-        .cta-button:hover {
-            background: var(--secondary-color);
-            transform: scale(1.05);
-        }
-
-        footer {
-            margin-top: 4rem;
+        .cta-section {
             text-align: center;
-            color: #666;
-            padding: 2rem;
-            border-top: 1px solid #ddd;
+            padding: 3rem 0;
+            background: #f8f9fa;
         }
 
         @media (max-width: 768px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
+            .services-hero h1 {
+                font-size: 2rem;
             }
             
-            #services {
-                margin-left: 0;
-                width: 100%;
+            .services-container {
+                padding: 2rem 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <h1><b>Developer</b></h1>
-                <h2>Jawad</h2>
+    <!-- Your Existing Navigation/Sidebar Here -->
+
+    <main>
+        <section class="services-hero">
+            <h1>My Expertise</h1>
+            <p>Professional solutions tailored to your business needs</p>
+        </section>
+
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h2>Web Development</h2>
+                <p>Build responsive and scalable web applications using modern technologies like React, Node.js and MongoDB.</p>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="/" class="nav-item"><span class="icon">🏠</span>Home</a></li>
-                    <li><a href="myintro.html" class="nav-item"><span class="icon">👨‍💻</span>My Intro</a></li>
-                    <li><a href="services.html" class="nav-item active"><span class="icon">⚙️</span>Services</a></li>
-                    <li><a href="cv.html" class="nav-item"><span class="icon">📄</span>CV</a></li>
-                    <li><a href="blog.html" class="nav-item"><span class="icon">📝</span>Blog</a></li>
-                    <li><a href="contactme.html" class="nav-item"><span class="icon">📞</span>Contact Me</a></li>
-                    <li><a href="myProject.html" class="nav-item"><span class="icon">📽</span>My Projects</a></li>
-                </ul>
-            </nav>
+            
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h2>UI/UX Design</h2>
+                <p>Create intuitive user interfaces with pixel-perfect designs and seamless user experiences.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🚀</div>
+                <h2>SEO Optimization</h2>
+                <p>Boost your search rankings with technical SEO audits and content optimization strategies.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h2>Custom Solutions</h2>
+                <p>Develop tailored software solutions that perfectly fit your business requirements.</p>
+            </div>
         </div>
 
-        <!-- Services Section -->
-        <section id="services" class="section">
-            <h1>My Services</h1>
-            <p class="lead-text">Here’s what I can do for you! I provide professional and reliable services tailored to your needs.</p>
-
-            <div class="services-container">
-                <div class="service">
-                    <h2>Web Development</h2>
-                    <p>Full-stack web development with modern technologies including React, Node.js, and MongoDB. Responsive design and cross-browser compatibility guaranteed.</p>
-                </div>
-                <div class="service">
-                    <h2>UI/UX Design</h2>
-                    <p>User-centered design approach with Figma prototypes. Focus on accessibility and intuitive user flows for better engagement.</p>
-                </div>
-                <div class="service">
-                    <h2>SEO Optimization</h2>
-                    <p>Comprehensive SEO audits and strategy implementation. Increase organic traffic with technical SEO and content optimization.</p>
-                </div>
-                <div class="service">
-                    <h2>Custom Solutions</h2>
-                    <p>Tailored software solutions including API integrations, CMS development, and enterprise-grade applications.</p>
-                </div>
-            </div>
-
-            <!-- Call to Action -->
-            <div style="text-align: center;">
-                <a href="contactme.html" class="cta-button">Get Started →</a>
-            </div>
-
-            <footer>
-                <p>© 2024 Jawad's Portfolio. Crafted with ❤️</p>
-            </footer>
+        <section class="cta-section">
+            <a href="contactme.html" class="cta-button">Start Your Project Today →</a>
         </section>
-    </div>
+    </main>
+
+    <!-- Your Existing Footer Here -->
 </body>
 </html>
