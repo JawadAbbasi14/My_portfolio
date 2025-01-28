@@ -1,17 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services page</title>
+    <title>Services | Jawad</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <style>
+        /* Custom Styles for Services Page */
+        :root {
+            --primary-color: #2ecc71;
+            --secondary-color: #27ae60;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+        }
 
+        .container {
+            display: flex;
+            min-height: 100vh;
+            background: var(--light-color);
+        }
+
+        /* Enhanced Sidebar */
+        .sidebar {
+            background: linear-gradient(145deg, var(--dark-color), #34495e);
+            width: 250px;
+            padding: 2rem;
+            position: fixed;
+            height: 100%;
+            box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-header {
+            color: white;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .sidebar-header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar-header h2 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .nav-item {
+            color: var(--light-color);
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            background: var(--primary-color);
+            transform: translateX(10px);
+        }
+
+        .icon {
+            font-size: 1.2rem;
+            margin-right: 1rem;
+        }
+
+        /* Services Section */
+        #services {
+            margin-left: 250px;
+            padding: 4rem 2rem;
+            width: calc(100% - 250px);
+        }
+
+        #services h1 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        #services h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+        }
+
+        .service::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .service:hover::before {
+            width: 100%;
+            opacity: 0.1;
+        }
+
+        .service h2 {
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service p {
+            color: #666;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white !important;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            margin-top: 2rem;
+        }
+
+        .cta-button:hover {
+            background: var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            color: #666;
+            padding: 2rem;
+            border-top: 1px solid #ddd;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            
+            #services {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
 <body>
     <div class="container">
         <!-- Sidebar -->
-        <div class="sidebar sidebar-go">
+        <div class="sidebar">
             <div class="sidebar-header">
                 <h1><b>Developer</b></h1>
                 <h2>Jawad</h2>
@@ -20,7 +195,7 @@
                 <ul>
                     <li><a href="/" class="nav-item"><span class="icon">🏠</span>Home</a></li>
                     <li><a href="myintro.html" class="nav-item"><span class="icon">👨‍💻</span>My Intro</a></li>
-                    <li><a href="services.html" class="nav-item"><span class="icon">⚙️</span>Services</a></li>
+                    <li><a href="services.html" class="nav-item active"><span class="icon">⚙️</span>Services</a></li>
                     <li><a href="cv.html" class="nav-item"><span class="icon">📄</span>CV</a></li>
                     <li><a href="blog.html" class="nav-item"><span class="icon">📝</span>Blog</a></li>
                     <li><a href="contactme.html" class="nav-item"><span class="icon">📞</span>Contact Me</a></li>
@@ -31,40 +206,37 @@
 
         <!-- Services Section -->
         <section id="services" class="section">
-            <h1 style="color: black;">My Services</h1>
-            <p>Here’s what I can do for you! I provide professional and reliable services tailored to your needs.</p>
+            <h1>My Services</h1>
+            <p class="lead-text">Here’s what I can do for you! I provide professional and reliable services tailored to your needs.</p>
 
             <div class="services-container">
                 <div class="service">
                     <h2>Web Development</h2>
-                    <p>I design and develop responsive, user-friendly websites that look great on any device. Whether it's for business, personal use, or an e-commerce platform, I ensure your site meets all modern standards.</p>
+                    <p>Full-stack web development with modern technologies including React, Node.js, and MongoDB. Responsive design and cross-browser compatibility guaranteed.</p>
                 </div>
                 <div class="service">
                     <h2>UI/UX Design</h2>
-                    <p>I create intuitive and visually appealing designs that enhance user experience. I focus on making interfaces both beautiful and functional to provide users with the best experience.</p>
+                    <p>User-centered design approach with Figma prototypes. Focus on accessibility and intuitive user flows for better engagement.</p>
                 </div>
                 <div class="service">
                     <h2>SEO Optimization</h2>
-                    <p>I improve your website's visibility on search engines and help drive organic traffic. With my SEO services, your site will rank higher, making it easier for potential customers to find you.</p>
+                    <p>Comprehensive SEO audits and strategy implementation. Increase organic traffic with technical SEO and content optimization.</p>
                 </div>
                 <div class="service">
                     <h2>Custom Solutions</h2>
-                    <p>Need something unique? I can provide tailored solutions to meet your project requirements, whether it’s an app, a specialized website feature, or a complex backend solution.</p>
+                    <p>Tailored software solutions including API integrations, CMS development, and enterprise-grade applications.</p>
                 </div>
             </div>
 
-            <!-- Call to Action Button -->
-            <div style="text-align: center; margin-top: 30px;">
-                <button><a href="index.html" style="color: white; text-decoration: none;">Go Home</a></button>
+            <!-- Call to Action -->
+            <div style="text-align: center;">
+                <a href="contactme.html" class="cta-button">Get Started →</a>
             </div>
 
             <footer>
-                <p>© 2024 My Portfolio. All Rights Reserved.</p>
+                <p>© 2024 Jawad's Portfolio. Crafted with ❤️</p>
             </footer>
         </section>
     </div>
-
-    <script src="script.js"></script>
 </body>
-
 </html>
