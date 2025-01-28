@@ -4,35 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog pages</title>
+    <title>Blog Pages</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+        }
+        .sidebar h1, .sidebar h2 {
+            text-align: center;
+        }
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar nav ul li {
+            padding: 10px;
+        }
+        .sidebar nav ul li a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+        .sidebar nav ul li a .icon {
+            margin-right: 10px;
+        }
+        .main {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .blogcontainer {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .blogcontainer h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .blogitem {
+            background: #ecf0f1;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .blogitem h2 {
+            color: #2980b9;
+        }
+        .blogitem p {
+            color: #555;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #27ae60;
+            border: none;
+            border-radius: 5px;
+        }
+        button a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body>
-
     <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar sidebar-go">
+        <div class="sidebar">
             <div class="sidebar-header">
-                <h1><b>Develper</b></h1>  
+                <h1><b>Developer</b></h1>  
                 <h2>Jawad</h2>
             </div>
             <nav>
                 <ul>
-                    <li><a href="/" class="nav-item"><span class="icon">🏠</span>Home</a></li>
-                    <li><a href="myintro.html" class="nav-item"><span class="icon">👨‍💻</span>My Intro</a></li>
-                    <li><a href="services.html" class="nav-item"><span class="icon">⚙️</span>Services</a></li>
-                    <li><a href="cv.html" class="nav-item"><span class="icon">📄</span>CV</a></li>
-                    <li><a href="blog.html" class="nav-item"><span class="icon">📝</span>Blog</a></li>
-                    <li><a href="contactme.html" class="nav-item"><span class="icon">📞</span>Contact Me</a></li>
-                    <li><a href="myProject..html" class="nav-item"><span class="icon">📽</span>MY Projects</a></li>
+                    <li><a href="/"><span class="icon">🏠</span>Home</a></li>
+                    <li><a href="myintro.html"><span class="icon">👨‍💻</span>My Intro</a></li>
+                    <li><a href="services.html"><span class="icon">⚙️</span>Services</a></li>
+                    <li><a href="cv.html"><span class="icon">📄</span>CV</a></li>
+                    <li><a href="blog.html"><span class="icon">📝</span>Blog</a></li>
+                    <li><a href="contactme.html"><span class="icon">📞</span>Contact Me</a></li>
+                    <li><a href="myProject.html"><span class="icon">📽</span>My Projects</a></li>
                 </ul>
             </nav>
         </div>
-
         <div class="main">
-            <div class="blogcountanier">
-              
+            <div class="blogcontainer">
                 <h1>BLOGS BY JAWAD</h1>
                 <div class="blogitem">
                     <h2>Mastering JavaScript: A Fun Journey</h2>
@@ -49,8 +125,6 @@
             </div>
         </div>
     </div>
-
-       
     <button><a href="index.html">Go Home</a></button>
     <script src="script.js"></script>
 </body>
