@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
+    <title>Jawad's Portfolio</title>
     <style>
-        /* Universal Styles */
         * {
             margin: 0;
             padding: 0;
@@ -16,35 +15,24 @@
             background: url('background.jpg') no-repeat center center/cover;
             font-family: 'Arial', sans-serif;
             color: #fff;
-            transition: background-color 0.5s ease, color 0.5s ease;
+            transition: 0.5s ease;
         }
 
-        /* Dark Mode Styles */
-        .dark {
-            background-color: #020000;
-            color: white;
-        }
+        .dark { background-color: #020000; color: white; }
+        .light { background-color: whitesmoke; color: #020000; }
 
-        /* Light Mode Styles */
-        .light {
-            background-color: whitesmoke;
-            color: #020000;
-        }
-
-        /* Switch Button Styles */
         .switch-mode {
             width: 100px;
             height: 40px;
             border-radius: 20px;
-            color: #fff;
             background-color: #333;
             position: fixed;
             top: 20px;
             left: 20px;
             border: none;
             cursor: pointer;
+            color: white;
             font-size: 16px;
-            font-weight: bold;
             transition: all 0.3s ease;
         }
 
@@ -53,7 +41,6 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Portfolio Grid */
         .portfolio {
             display: flex;
             flex-wrap: wrap;
@@ -70,7 +57,7 @@
             overflow: hidden;
             position: relative;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
         .portfolio-item:hover {
@@ -82,12 +69,12 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease, filter 0.5s ease;
+            transition: 0.5s ease;
         }
 
         .portfolio-item:hover img {
             transform: scale(1.2);
-            filter: brightness(80%) contrast(110%);
+            filter: brightness(80%);
         }
 
         .portfolio-item span {
@@ -97,23 +84,17 @@
             transform: translateX(-50%);
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
-            font-size: 14px;
             padding: 5px 10px;
             border-radius: 5px;
             opacity: 0;
-            transition: opacity 0.3s;
+            transition: 0.3s;
+            font-size: 14px;
         }
 
         .portfolio-item:hover span {
             opacity: 1;
         }
 
-        .portfolio-item span a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        /* Navigation Buttons */
         .nav-buttons {
             display: flex;
             justify-content: center;
@@ -129,24 +110,17 @@
             padding: 15px 30px;
             border-radius: 8px;
             cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: 0.3s;
             width: 150px;
-            height: 50px;
         }
 
         .nav-buttons button:hover {
             background: green;
             color: whitesmoke;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
             transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
         }
 
-        .nav-buttons button a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        /* Responsive Design */
         @media (max-width: 600px) {
             .portfolio-item {
                 width: 150px;
@@ -155,21 +129,23 @@
         }
     </style>
 </head>
-<body>
+<body class="light">
     <button class="switch-mode" onclick="toggleMode()">Switch</button>
+    
     <h1 align="center">
-        <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=35&duration=4000&pause=500&center=true&vCenter=true&width=800&lines=Hello%2C+I+am+Jawad!;Welcome+to+my+portfolio!;I+am+Python+Developer+%26+Programmer+%F0%9F%92%BB!" style="color:green; font-weight:bolder;" />
+        <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=35&duration=4000&pause=500&center=true&vCenter=true&width=800&lines=Hello%2C+I+am+Jawad!;Welcome+to+my+portfolio!;I+am+Python+Developer+%26+Programmer+%F0%9F%92%BB!" 
+             alt="Animated Header" 
+             style="color:green; font-weight:bolder;">
     </h1>
 
-    <p class="highlighted-para">Explore my creative work and skills below!</p>
-
     <section class="portfolio">
+        <!-- Replace image filenames with your actual files -->
         <div class="portfolio-item">
-            <img src="myintro.jpg" alt="About Me">
+            <img src="about-me.jpg" alt="About Me">
             <span><a href="myintro.html">ABOUT ME</a></span>
         </div>
         <div class="portfolio-item">
-            <img src="services.avif" alt="My Skills">
+            <img src="skills.jpg" alt="My Skills">
             <span><a href="services.html">MY SKILLS</a></span>
         </div>
         <div class="portfolio-item">
@@ -177,31 +153,29 @@
             <span><a href="cv.html">MY CV</a></span>
         </div>
         <div class="portfolio-item">
-            <img src="project.png" alt="Projects">
-            <span><a href="myProject..html">PROJECTS</a></span>
+            <img src="projects.jpg" alt="Projects">
+            <span><a href="projects.html">PROJECTS</a></span>
         </div>
         <div class="portfolio-item">
-            <img src="contact.png" alt="Contact">
-            <span><a href="contactme.html">CONTACT</a></span>
+            <img src="contact.jpg" alt="Contact">
+            <span><a href="contact.html">CONTACT</a></span>
         </div>
         <div class="portfolio-item">
-            <img src="blog.webp" alt="Blog">
+            <img src="blog.jpg" alt="Blog">
             <span><a href="blog.html">BLOG</a></span>
         </div>
     </section>
 
     <div class="nav-buttons">
-        <button><a href="index.html"><b>Refresh</b></a></button>
-        <button><a href="contactme.html"><b>Contact</b></a></button>
+        <button><a href="index.html">Refresh</a></button>
+        <button><a href="contact.html">Contact</a></button>
     </div>
-<script>
-    function toggleMode() {
-        document.body.classList.toggle('dark');
-        document.body.classList.toggle('light');
-    }
 
-    // Default mode
-    document.body.classList.add('light');
-</script>
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark');
+            document.body.classList.toggle('light');
+        }
+    </script>
 </body>
 </html>
