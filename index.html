@@ -3,59 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Jawad's Portfolio</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Arial', sans-serif; transition: 0.5s ease; }
-        .light { background: #f5f5f5; color: #333; }
-        .dark { background: #020000; color: white; }
-        .switch-mode {
-            position: fixed; top: 20px; right: 20px;
-            padding: 10px 20px; border-radius: 20px;
-            cursor: pointer; background: #333; color: white; border: none;
+        body { 
+            font-family: 'Arial', sans-serif; 
+            transition: 0.3s ease;
+            min-height: 100vh;
         }
+        .light { background: #f5f5f5; color: #333; }
+        .dark { background: #020000; color: #fff; }
+        
+        /* Theme Toggle */
+        .switch-mode {
+            position: fixed; 
+            top: 20px; 
+            right: 20px;
+            padding: 10px 20px; 
+            border-radius: 20px;
+            cursor: pointer; 
+            background: #333; 
+            color: white; 
+            border: 2px solid lightgreen;
+            transition: 0.3s;
+        }
+        .dark .switch-mode {
+            background: lightgreen;
+            color: #020000;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 80px 20px 40px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: lightgreen;
+        }
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        /* Portfolio Grid */
         .portfolio {
-            display: flex; justify-content: center; flex-wrap: wrap;
-            gap: 20px; padding: 50px 20px; max-width: 1200px; margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .portfolio-item {
-            background: white; border-radius: 10px;
-            overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease; width: 150px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
         }
-        .portfolio-item:hover { transform: translateY(-5px); }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            border-color: lightgreen;
+            box-shadow: 0 5px 15px rgba(144, 238, 144, 0.2);
+        }
         .portfolio-item img {
-            width: 100%; height: 150px; object-fit: cover;
-            border-bottom: 3px solid lightgreen;
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-bottom: 2px solid lightgreen;
         }
         .portfolio-item span {
-            display: block; padding: 10px; text-align: center;
-            background: white; color: #333; font-weight: bold;
+            display: block;
+            padding: 15px 10px;
+            font-weight: bold;
         }
-        .nav-buttons {
-            text-align: center; padding: 20px;
+
+        /* Action Buttons */
+        .action-buttons {
+            text-align: center;
+            padding: 40px 20px;
         }
-        .nav-buttons button {
-            padding: 12px 25px; margin: 0 10px;
-            background: lightgreen; border: none;
-            border-radius: 5px; cursor: pointer; font-size: 16px;
+        .btn {
+            padding: 12px 35px;
+            margin: 0 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .btn-primary {
+            background: lightgreen;
+            color: #020000;
+            border: 2px solid lightgreen;
+        }
+        .btn-secondary {
+            background: transparent;
+            color: lightgreen;
+            border: 2px solid lightgreen;
+        }
+
+        /* Dark Mode Adjustments */
+        .dark .portfolio-item {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .dark .btn-secondary:hover {
+            background: lightgreen;
+            color: #020000;
         }
     </style>
 </head>
 <body class="light">
-    <button class="switch-mode" onclick="toggleMode()">🌓 Toggle Theme</button>
-    <h1 style="text-align: center; padding: 40px 20px; color: green;">
-        Hello,<br>
-        <span style="font-size: 0.8em;">Explore my creative work and skills below!</span>
-    </h1>
+    <button class="switch-mode" onclick="toggleMode()">🌙 Switch</button>
+    
+    <div class="header">
+        <h1>Hello, I am Jawad!</h1>
+        <p>Explore my creative work and skills below!</p>
+    </div>
+
     <div class="portfolio">
         <a href="#" class="portfolio-item">
             <img src="intro.png" alt="Intro">
-            <span>My Intro</span>
+            <span>MY INTRO</span>
         </a>
         <a href="#" class="portfolio-item">
             <img src="service.png" alt="Service">
-            <span>Service</span>
+            <span>SERVICE</span>
         </a>
         <a href="#" class="portfolio-item">
             <img src="cv.png" alt="CV">
@@ -63,26 +139,38 @@
         </a>
         <a href="#" class="portfolio-item">
             <img src="projects.png" alt="Projects">
-            <span>Projects</span>
-        </a>
-        <a href="#" class="portfolio-item">
-            <img src="contact.png" alt="Contact">
-            <span>Contact</span>
+            <span>PROJECTS</span>
         </a>
         <a href="#" class="portfolio-item">
             <img src="blog.png" alt="Blog">
-            <span>Blog</span>
+            <span>BLOG</span>
+        </a>
+        <a href="#" class="portfolio-item">
+            <img src="contact.png" alt="Contact">
+            <span>CONTACT</span>
         </a>
     </div>
-    <div class="nav-buttons">
-        <button onclick="location.reload()">Refresh</button>
-        <button onclick="window.location.href='contact.html'">Contact</button>
+
+    <div class="action-buttons">
+        <button class="btn btn-primary" onclick="location.reload()">Refresh</button>
+        <a href="contact.html" class="btn btn-secondary">Contact Me</a>
     </div>
+
     <script>
         function toggleMode() {
             document.body.classList.toggle('dark');
             document.body.classList.toggle('light');
+            
+            // Save theme preference
+            const isDark = document.body.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
         }
+
+        // Load saved theme
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.classList.add(savedTheme);
+        });
     </script>
 </body>
 </html>
