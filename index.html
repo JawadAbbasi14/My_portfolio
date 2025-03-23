@@ -55,15 +55,18 @@
 
         /* Heading Animation */
         @keyframes typingEffect {
-      0% { color: green; content: "Hello, I am Jawad!"; }
-      33% { color: red; content: "Hello, I am a Developer!"; }
-      66% { color: yellow; content: "Hello, I am a Programmer!"; }
-      100% { color: green; content: "Hello, I am Jawad!"; }
-    }
-  
-    .animated-heading {
-      animation: typingEffect 6s infinite;
-    }
+            0% { color: green; content: "Hello, I am Jawad!"; }
+            33% { color: red; content: "Hello, I am a Developer!"; }
+            66% { color: yellow; content: "Hello, I am a Programmer!"; }
+            100% { color: green; content: "Hello, I am Jawad!"; }
+        }
+
+        .animated-heading {
+            animation: typingEffect 6s infinite;
+            text-align: center;
+            font-size: 2.5em;
+            margin-top: 50px;
+        }
 
         @keyframes fadeInScale {
             0% {
@@ -108,7 +111,7 @@
         .portfolio-item {
             width: 200px;
             height: 200px;
-            background: #fff;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
             border-radius: 10px;
             overflow: hidden;
             position: relative;
@@ -166,7 +169,7 @@
 
         .nav-buttons button {
             font-size: 18px;
-            background: lightgreen;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
             color: black;
             border: 3px solid black;
             padding: 15px 30px;
@@ -204,21 +207,12 @@
 </head>
 <body>
     <button class="switch-mode" onclick="toggleMode()">Switch</button>
-    <h1 align="center">
+    <h1 class="animated-heading">
         <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=35&duration=4000&pause=500&center=true&vCenter=true&width=800&lines=Hello%2C+I+am+Jawad!;Welcome+to+my+portfolio!;I+am+Python+Developer+%26+Programmer+%F0%9F%92%BB!" style="color:green; font-weight:bolder;" />
-      </h1>
-
-
-      </h1>
-      
-      
-      
- 
-      
+    </h1>
     <p class="highlighted-para">Explore my creative work and skills below!</p>
 
     <section class="portfolio">
-        
         <div class="portfolio-item">
             <img src="myintro.jpg" alt="About Me">
             <span><a href="myintro.html">ABOUT ME</a></span>
@@ -228,10 +222,9 @@
             <span><a href="services.html">MY SKILLS</a></span>
         </div>
         <div class="portfolio-item">
-         <img src="cv.jpg" alt="My Cv">
-         <span><a href="services.html">MY SKILLS</a></span>
-     </div>
-     
+            <img src="cv.jpg" alt="My Cv">
+            <span><a href="services.html">MY SKILLS</a></span>
+        </div>
         <div class="portfolio-item">
             <img src="project.png" alt="Projects">
             <span><a href="myProject..html">PROJECTS</a></span>
